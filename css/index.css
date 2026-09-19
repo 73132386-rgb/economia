@@ -1,0 +1,44 @@
+/* Estilos exclusivos de index.html: hero, lecciones rápidas y banners promo */
+
+.hero{position:relative;overflow:hidden;padding:72px 0 48px;}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;}
+.hero h1{font-size:clamp(2.1em,4.2vw,3.2em);max-width:15ch;}
+.hero p.lead{margin:22px 0 32px;}
+.hero-visual{position:relative;}
+.weave-frame{
+  position:relative;background:var(--primary);border-radius:14px;padding:26px;
+  box-shadow:0 20px 45px rgba(31,61,61,0.25);
+}
+.phone-caption{color:var(--bg);font-size:0.85em;margin-top:14px;opacity:0.85;}
+
+/* LECCIONES RÁPIDAS */
+.lessons-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px;}
+.lesson-card{background:var(--paper);border-radius:10px;padding:28px;border-top:5px solid var(--green);}
+.lesson-card.gold{border-top-color:var(--gold);}
+.lesson-card.teal{border-top-color:var(--primary);}
+.lesson-card.clay{border-top-color:var(--clay);}
+.lesson-card h3{font-size:1.2em;margin-bottom:10px;}
+.lesson-card .tip{
+  background:var(--bg-alt);border-radius:8px;padding:14px 16px;font-size:0.95em;
+  color:var(--ink);font-weight:600;margin:0;
+}
+
+/* BANNERS PROMOCIONALES (juego / talleres) */
+.promo{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  background:var(--bg-alt);border-radius:16px;padding:44px;
+}
+.promo.dark{background:var(--primary);color:var(--bg);}
+.promo.dark h2, .promo.dark .eyebrow{color:var(--bg);}
+.promo.dark p{color:#D9E2DC;}
+.promo-visual{
+  background:var(--paper);border-radius:10px;padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-visual{order:-1;}
+  .lessons-grid{grid-template-columns:1fr;}
+  .promo{grid-template-columns:1fr;padding:30px;}
+}

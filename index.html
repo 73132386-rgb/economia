@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yanapay Finanzas — Educación financiera para Junín</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Yanapay <span>Finanzas</span></a>
+    <div class="nav-right">
+      <nav class="links" id="navLinks">
+        <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+        <a href="ahorro-jugando.html" data-i18n="nav.juego">Aprende jugando</a>
+        <a href="evaluacion.html" data-i18n="nav.autoeval">Mide tu avance</a>
+        <a href="talleres.html" data-i18n="nav.talleres">Talleres cerca de ti</a>
+      </nav>
+      <div class="lang-toggle" id="langToggle">
+        <button data-lang="es">ES</button>
+        <button data-lang="qu">QU</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="idx.eyebrow">Junín · Aprende de una vez</span>
+      <h1 data-i18n="idx.hero.title">Aprende a cuidar tu dinero, hoy</h1>
+      <p class="lead" data-i18n="idx.hero.lead">Nada de teoría larga: cuatro reglas que puedes aplicar esta misma semana, un juego para practicar ahorro, y los talleres presenciales más cercanos a ti.</p>
+      <div class="cta-row">
+        <a href="ahorro-jugando.html" class="btn btn-primary" data-i18n="idx.hero.cta1">Jugar y aprender a ahorrar</a>
+        <a href="talleres.html" class="btn btn-ghost" data-i18n="idx.hero.cta2">Ver talleres cerca de ti</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="weave-frame">
+        <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="weave" width="28" height="28" patternUnits="userSpaceOnUse">
+              <path d="M0 14 L14 0 L28 14 L14 28 Z" fill="none" stroke="#C99A2E" stroke-width="1.4" opacity="0.55"/>
+            </pattern>
+          </defs>
+          <rect width="320" height="220" rx="8" fill="#2E5656"/>
+          <rect width="320" height="220" rx="8" fill="url(#weave)"/>
+          <rect x="24" y="24" width="272" height="172" rx="6" fill="#F5F1E7"/>
+          <rect x="24" y="24" width="272" height="34" rx="6" fill="#1F3D3D"/>
+          <circle cx="42" cy="41" r="5" fill="#C99A2E"/>
+          <rect x="60" y="36" width="120" height="10" rx="2" fill="#F5F1E7" opacity="0.85"/>
+          <rect x="44" y="76" width="140" height="12" rx="2" fill="#241C14" opacity="0.75"/>
+          <rect x="44" y="98" width="230" height="8" rx="2" fill="#5C4E3E" opacity="0.5"/>
+          <rect x="44" y="112" width="230" height="8" rx="2" fill="#5C4E3E" opacity="0.5"/>
+          <rect x="44" y="136" width="100" height="32" rx="6" fill="#4C7A5E"/>
+          <rect x="156" y="136" width="100" height="32" rx="6" fill="#A6432B"/>
+        </svg>
+        <p class="phone-caption" data-i18n="idx.hero.caption">Funciona con poca señal, desde cualquier celular.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="idx.lessons.eyebrow">Cuatro reglas, no cuatro clases</span>
+    <h2 data-i18n="idx.lessons.title">Aplícalo hoy mismo</h2>
+    <p class="lead" style="margin-top:14px;" data-i18n="idx.lessons.lead">Una idea concreta por tema. Sin relleno.</p>
+
+    <div class="lessons-grid">
+      <div class="lesson-card">
+        <h3 data-i18n="idx.lesson.ahorro.title">Ahorro</h3>
+        <p class="tip" data-i18n="idx.lesson.ahorro.tip">Aparta una parte de lo que ganes apenas lo recibas, no al final del mes: lo que sobra casi nunca sobra.</p>
+      </div>
+      <div class="lesson-card gold">
+        <h3 data-i18n="idx.lesson.presupuesto.title">Presupuesto</h3>
+        <p class="tip" data-i18n="idx.lesson.presupuesto.tip">Anota en un cuaderno lo que entra y lo que sale cada semana. Si no lo anotas, no lo controlas.</p>
+      </div>
+      <div class="lesson-card teal">
+        <h3 data-i18n="idx.lesson.billeteras.title">Billeteras digitales</h3>
+        <p class="tip" data-i18n="idx.lesson.billeteras.tip">Antes de usar una billetera digital, guarda tú mismo el número de soporte y revisa que la app sea la oficial.</p>
+      </div>
+      <div class="lesson-card clay">
+        <h3 data-i18n="idx.lesson.credito.title">Crédito responsable</h3>
+        <p class="tip" data-i18n="idx.lesson.credito.tip">Si nadie te puede explicar con claridad cuánto pagarás en total, no firmes todavía.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="promo">
+      <div>
+        <span class="eyebrow" data-i18n="idx.game-banner.eyebrow">Practica sin arriesgar nada real</span>
+        <h2 data-i18n="idx.game-banner.title">Aprende a ahorrar, jugando</h2>
+        <p class="lead" style="margin-top:12px;" data-i18n="idx.game-banner.lead">Ponte en los zapatos de una vendedora de feria con ingresos que suben y bajan cada semana. Decide cuánto ahorrar y mira si llegas a la meta.</p>
+        <a href="ahorro-jugando.html" class="btn btn-gold" style="margin-top:20px;" data-i18n="idx.game-banner.cta">Empezar el juego</a>
+      </div>
+      <div class="promo-visual">
+        <div class="meter-track"><div class="meter-fill" style="width:65%;"></div></div>
+        <p style="margin:14px 0 0;color:var(--ink-soft);font-size:0.9em;">Semana 4 de 6 — S/ 48 ahorrados</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="promo dark">
+      <div>
+        <span class="eyebrow" data-i18n="idx.talleres-banner.eyebrow">Aprendizaje presencial</span>
+        <h2 data-i18n="idx.talleres-banner.title">Talleres cerca de la zona de Junín</h2>
+        <p class="lead" style="margin-top:12px;" data-i18n="idx.talleres-banner.lead">Puntos Multired, oficinas de Caja Huancayo y talleres comunitarios donde puedes aprender cara a cara.</p>
+        <a href="talleres.html" class="btn btn-primary" style="margin-top:20px;" data-i18n="idx.talleres-banner.cta">Ver todos los talleres</a>
+      </div>
+      <div class="promo-visual">
+        <p style="margin:0;color:var(--ink-soft);font-weight:700;">📍 Pampamichi · Huancayo · Concepción · Jauja</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-tag" data-i18n="idx.footer.tag">Yanapay Finanzas — "yanapay" significa ayudar, en quechua.</div>
+    <div class="footer-meta">
+      <span data-i18n="idx.footer.meta">Reto ABR · Economía 2</span><br>
+      Fuentes: SBS, CAF, BCRP
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

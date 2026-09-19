@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aprende a ahorrar jugando — Yanapay Finanzas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/juego.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Yanapay <span>Finanzas</span></a>
+    <div class="nav-right">
+      <nav class="links" id="navLinks">
+        <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+        <a href="ahorro-jugando.html" data-i18n="nav.juego">Aprende jugando</a>
+        <a href="evaluacion.html" data-i18n="nav.autoeval">Mide tu avance</a>
+        <a href="talleres.html" data-i18n="nav.talleres">Talleres cerca de ti</a>
+      </nav>
+      <div class="lang-toggle" id="langToggle">
+        <button data-lang="es">ES</button>
+        <button data-lang="qu">QU</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section style="padding-bottom:40px;">
+  <div class="wrap">
+
+    <!-- ===================== HUB: elegir juego ===================== -->
+    <div id="gameHub">
+      <span class="eyebrow" data-i18n="juego.hub.eyebrow">Practica sin arriesgar nada real</span>
+      <h1 data-i18n="juego.hub.title">Elige un juego para aprender</h1>
+      <p class="lead" style="margin-top:14px;" data-i18n="juego.hub.lead">Cuatro juegos cortos para practicar ahorro, presupuesto, billeteras digitales y crédito. Juega, equivócate y aprende: cada pregunta te muestra la respuesta correcta.</p>
+
+      <div class="eval-hint">
+        <span data-i18n="juego.hub.eval-hint">¿Primera vez aquí? Antes de jugar puedes responder una autoevaluación corta para medir cuánto sabes hoy.</span>
+        <a href="evaluacion.html" data-i18n="juego.hub.eval-link">Ir a la autoevaluación</a>
+      </div>
+
+      <div class="game-hub-grid">
+        <div class="game-card">
+          <div class="game-card-icon">🐷</div>
+          <h3 data-i18n="juego.card1.title">Ahorra como jugando</h3>
+          <p data-i18n="juego.card1.desc">Decide cuánto ahorrar cada semana con ingresos que suben y bajan.</p>
+          <button class="btn btn-gold" data-open-game="savings" data-i18n="juego.cta.play">Jugar</button>
+        </div>
+        <div class="game-card">
+          <div class="game-card-icon">🧾</div>
+          <h3 data-i18n="juego.card2.title">¿Necesitas o quieres?</h3>
+          <p data-i18n="juego.card2.desc">Aprende a diferenciar gastos necesarios de gastos que pueden esperar.</p>
+          <button class="btn btn-gold" data-open-game="budget" data-i18n="juego.cta.play">Jugar</button>
+        </div>
+        <div class="game-card">
+          <div class="game-card-icon">📱</div>
+          <h3 data-i18n="juego.card3.title">Billetera segura</h3>
+          <p data-i18n="juego.card3.desc">Reconoce señales de estafa al usar una billetera digital.</p>
+          <button class="btn btn-gold" data-open-game="wallet" data-i18n="juego.cta.play">Jugar</button>
+        </div>
+        <div class="game-card">
+          <div class="game-card-icon">🤝</div>
+          <h3 data-i18n="juego.card4.title">Crédito sin sustos</h3>
+          <p data-i18n="juego.card4.desc">Practica decisiones para pedir prestado sin caer en deudas.</p>
+          <button class="btn btn-gold" data-open-game="credit" data-i18n="juego.cta.play">Jugar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== JUEGO 1: Ahorra como jugando ===================== -->
+    <div id="board-savings" style="display:none;">
+      <button class="back-link" data-back-hub>← <span data-i18n="juego.back">Volver a los juegos</span></button>
+      <span class="eyebrow" data-i18n="idx.game-banner.eyebrow">Practica sin arriesgar nada real</span>
+      <h1 data-i18n="game.title">Ahorra como jugando</h1>
+      <p class="lead" style="margin-top:14px;" data-i18n="game.lead">Eres Rosa, vendes papa y choclo en la feria de tu comunidad. Cada semana ganas algo distinto. Decide cuánto guardar sin quedarte sin nada para gastos del hogar.</p>
+
+      <div class="game-board" id="gameBoard">
+        <div class="piggy-wrap">
+          <div class="piggy-meter">
+            <div class="meter-track"><div class="meter-fill" id="meterFill" style="width:0%;"></div></div>
+            <div class="meter-label"><span data-i18n="game.meter.label">Total ahorrado</span>: S/ <span id="totalSaved">0</span></div>
+          </div>
+          <div class="round-info">
+            <div class="week-tag"><span data-i18n="game.week">Semana</span> <span id="weekNum">1</span> / 6</div>
+            <h3><span data-i18n="game.income">Ganaste</span> S/ <span id="weekIncome">0</span></h3>
+            <p id="weekEvent"></p>
+          </div>
+        </div>
+
+        <p style="font-weight:700;margin-top:26px;" data-i18n="game.choice.q">¿Cuánto apartas esta semana?</p>
+        <div class="choice-row" id="choiceRow"></div>
+
+        <div class="feedback-box" id="feedbackBox"></div>
+      </div>
+
+      <div class="game-board" id="resultBoard" style="display:none;">
+        <div class="badge-result">
+          <div class="medal" id="resultMedal">🥉</div>
+          <h3 id="resultBadgeName" data-i18n="game.badge.bronze">Ahorrista bronce</h3>
+          <p><span data-i18n="game.result.total">Ahorraste en total</span>: S/ <span id="resultTotal">0</span></p>
+          <p id="resultTip" style="max-width:50ch;margin:14px auto 0;color:var(--ink-soft);"></p>
+          <div style="margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <button class="btn btn-gold" id="playAgainBtn" data-i18n="game.play-again">Jugar de nuevo</button>
+            <button class="btn btn-outline" data-back-hub data-i18n="juego.back">Volver a los juegos</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== JUEGO 2: ¿Necesitas o quieres? (Presupuesto) ===================== -->
+    <div id="board-budget" style="display:none;">
+      <button class="back-link" data-back-hub>← <span data-i18n="juego.back">Volver a los juegos</span></button>
+      <span class="eyebrow" data-i18n="idx.lesson.presupuesto.title">Presupuesto</span>
+      <h1 data-i18n="juego.card2.title">¿Necesitas o quieres?</h1>
+      <p class="lead" style="margin-top:14px;" data-i18n="juego.card2.desc">Aprende a diferenciar gastos necesarios de gastos que pueden esperar.</p>
+      <div class="game-board">
+        <div class="quiz-area"></div>
+        <div class="quiz-result" style="display:none;"></div>
+      </div>
+    </div>
+
+    <!-- ===================== JUEGO 3: Billetera segura ===================== -->
+    <div id="board-wallet" style="display:none;">
+      <button class="back-link" data-back-hub>← <span data-i18n="juego.back">Volver a los juegos</span></button>
+      <span class="eyebrow" data-i18n="idx.lesson.billeteras.title">Billeteras digitales</span>
+      <h1 data-i18n="juego.card3.title">Billetera segura</h1>
+      <p class="lead" style="margin-top:14px;" data-i18n="juego.card3.desc">Reconoce señales de estafa al usar una billetera digital.</p>
+      <div class="game-board">
+        <div class="quiz-area"></div>
+        <div class="quiz-result" style="display:none;"></div>
+      </div>
+    </div>
+
+    <!-- ===================== JUEGO 4: Crédito sin sustos ===================== -->
+    <div id="board-credit" style="display:none;">
+      <button class="back-link" data-back-hub>← <span data-i18n="juego.back">Volver a los juegos</span></button>
+      <span class="eyebrow" data-i18n="idx.lesson.credito.title">Crédito responsable</span>
+      <h1 data-i18n="juego.card4.title">Crédito sin sustos</h1>
+      <p class="lead" style="margin-top:14px;" data-i18n="juego.card4.desc">Practica decisiones para pedir prestado sin caer en deudas.</p>
+      <div class="game-board">
+        <div class="quiz-area"></div>
+        <div class="quiz-result" style="display:none;"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-tag" data-i18n="idx.footer.tag">Yanapay Finanzas — "yanapay" significa ayudar, en quechua.</div>
+    <div class="footer-meta">
+      <span data-i18n="idx.footer.meta">Reto ABR · Economía 2</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/juego.js"></script>
+</body>
+</html>
