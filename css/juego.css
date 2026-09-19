@@ -92,9 +92,9 @@
 .quiz-feedback.is-incorrect{border-left-color:#dc2626;}
 .quiz-next{margin-top:20px;display:none;}
 
-@media (max-width:520px){
-  .piggy-wrap{flex-direction:column;align-items:stretch;}
-  .piggy-meter,.round-info{flex:1 1 auto;}
+@media (max-width:600px){
+  .piggy-wrap{flex-direction:column;flex-wrap:nowrap;align-items:stretch;}
+  .piggy-meter,.round-info{flex:none;width:auto;}
   .game-hub-grid{grid-template-columns:1fr;}
 }
 
