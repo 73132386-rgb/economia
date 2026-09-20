@@ -110,8 +110,15 @@ footer{padding:56px 0 40px;border-top:1px solid var(--line);}
   nav.links.open{max-height:320px;}
   nav.links a{width:100%;padding:16px 24px;border-bottom:1px solid var(--line);}
   .menu-btn{display:flex;}
-  .nav-right .lang-toggle{display:none;}
+  .nav-right{gap:12px;}
 }
 @media (max-width:520px){
   section{padding:56px 0;}
+  .nav-inner{padding:16px 16px;}
+  .nav-right{gap:8px;}
+  .lang-toggle button{padding:6px 10px;}
+}
+@media (max-width:360px){
+  .brand{font-size:1.1em;}
+  .lang-toggle button{padding:6px 8px;}
 }

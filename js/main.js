@@ -611,10 +611,32 @@ function initNav() {
   const menuBtn = document.getElementById("menuBtn");
   const navLinks = document.getElementById("navLinks");
   if (menuBtn && navLinks) {
-    menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-    navLinks.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => navLinks.classList.remove("open"))
+    const setMenu = (open) => {
+      navLinks.classList.toggle("open", open);
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    setMenu(false);
+
+    menuBtn.addEventListener("click", () =>
+      setMenu(!navLinks.classList.contains("open"))
     );
+    navLinks.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => setMenu(false))
+    );
+
+    // Tocar fuera del menú lo contrae (pointerdown funciona también en iOS)
+    document.addEventListener("pointerdown", (e) => {
+      if (!navLinks.classList.contains("open")) return;
+      if (navLinks.contains(e.target) || menuBtn.contains(e.target)) return;
+      setMenu(false);
+    });
+    // Tecla Escape y cambio a pantalla ancha también lo cierran
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setMenu(false);
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 860) setMenu(false);
+    });
   }
   const here = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll("nav.links a").forEach((a) => {
