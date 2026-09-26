@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talleres cerca de ti — Yanapay Finanzas</title>
+<title>Talleres en el Perú — Yanapay Finanzas</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1F3D3D">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="icons/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yanapay">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,6 +29,7 @@
         <a href="ahorro-jugando.html" data-i18n="nav.juego">Aprende jugando</a>
         <a href="evaluacion.html" data-i18n="nav.autoeval">Mide tu avance</a>
         <a href="talleres.html" data-i18n="nav.talleres">Talleres cerca de ti</a>
+        <a href="estrategias.html" data-i18n="nav.estrategias">Estrategias</a>
       </nav>
       <div class="lang-toggle" id="langToggle">
         <button data-lang="es">ES</button>
@@ -35,10 +44,11 @@
 
 <section>
   <div class="wrap">
-    <span class="eyebrow" data-i18n="talleres.eyebrow">Presencial y cerca de ti</span>
-    <h1 data-i18n="talleres.title">Talleres y puntos de aprendizaje en Junín</h1>
-    <p class="lead" style="margin-top:14px;" data-i18n="talleres.lead">Estos son los puntos de referencia de la propuesta: alianzas ya existentes en la región que pueden convertirse en aula.</p>
+    <span class="eyebrow" data-i18n="talleres.eyebrow">Presencial y cerca de ti, en cualquier región</span>
+    <h1 data-i18n="talleres.title">Talleres y puntos de aprendizaje en el Perú</h1>
+    <p class="lead" style="margin-top:14px;" data-i18n="talleres.lead">El piloto nació en Junín. Estos son esos puntos, más nuevas alianzas con agencias de Caja Huancayo en la costa, la sierra y la selva del país.</p>
 
+    <h2 style="margin-top:48px;font-size:1.2em;" data-i18n="talleres.group.junin">Piloto: Junín</h2>
     <div class="talleres-grid">
 
       <div class="taller-card">
@@ -78,6 +88,41 @@
           <h3 data-i18n="taller.jauja.name">Jauja</h3>
           <p data-i18n="taller.jauja.desc">Zona donde Caja Huancayo también dictó talleres de educación financiera reconocidos por la SBS.</p>
           <a href="https://www.google.com/maps/dir/?api=1&destination=Jauja,Junin,Peru" target="_blank" rel="noopener" data-i18n="talleres.cta">Cómo llegar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 style="margin-top:56px;font-size:1.2em;" data-i18n="talleres.group.nacional">Expansión nacional, con Caja Huancayo como aliado</h2>
+    <div class="talleres-grid">
+
+      <div class="taller-card">
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Caja+Huancayo,San+Martin+de+Porres,Lima,Peru&output=embed"></iframe>
+        <div class="taller-body">
+          <span class="tag" data-i18n="taller.lima.tag">Costa · Agencia Caja Huancayo</span>
+          <h3 data-i18n="taller.lima.name">Lima (San Martín de Porres)</h3>
+          <p data-i18n="taller.lima.desc">Caja Huancayo tiene agencias en Lima Metropolitana (San Martín de Porres, San Juan de Lurigancho, Callao), la puerta de entrada del piloto a la costa.</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Caja+Huancayo,San+Martin+de+Porres,Lima,Peru" target="_blank" rel="noopener" data-i18n="talleres.cta">Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="taller-card">
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Caja+Huancayo,Ayacucho,Peru&output=embed"></iframe>
+        <div class="taller-body">
+          <span class="tag" data-i18n="taller.ayacucho.tag">Sierra · Agencia Caja Huancayo</span>
+          <h3 data-i18n="taller.ayacucho.name">Ayacucho (Huanta)</h3>
+          <p data-i18n="taller.ayacucho.desc">Agencias de Caja Huancayo en Ayacucho y Huanta, para llevar los talleres a la sierra sur del país.</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Caja+Huancayo,Ayacucho,Peru" target="_blank" rel="noopener" data-i18n="talleres.cta">Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="taller-card">
+        <iframe loading="lazy" src="https://www.google.com/maps?q=Caja+Huancayo,Satipo,Junin,Peru&output=embed"></iframe>
+        <div class="taller-body">
+          <span class="tag" data-i18n="taller.satipo.tag">Selva · Agencia Caja Huancayo</span>
+          <h3 data-i18n="taller.satipo.name">Satipo</h3>
+          <p data-i18n="taller.satipo.desc">En la Selva Central de Junín, Caja Huancayo también tiene agencia en Satipo: el modelo funciona igual de bien lejos de la sierra.</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Caja+Huancayo,Satipo,Junin,Peru" target="_blank" rel="noopener" data-i18n="talleres.cta">Cómo llegar</a>
         </div>
       </div>
 

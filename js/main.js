@@ -1,10 +1,14 @@
 /* Yanapay Finanzas — traducción ES/QU y navegación compartida.
-   NOTA PARA QUIEN EDITE ESTO: las traducciones al quechua son un primer
-   borrador (quechua sureño general). Términos financieros modernos
-   (billetera digital, crédito) casi no tienen equivalente estandarizado,
-   así que se mantienen como préstamo del español dentro de la frase.
-   Antes de usarlo con una comunidad real, pídele a alguien que hable
-   quechua wanka (el de Junín) que lo revise: hay diferencias de región. */
+   NOTA PARA QUIEN EDITE ESTO: el proyecto nació como piloto en Junín y
+   ahora se plantea a nivel nacional, usando la red de agencias de Caja
+   Huancayo en costa, sierra y selva como aliado. Las traducciones al
+   quechua son un primer borrador (quechua sureño general). Términos
+   financieros modernos (billetera digital, crédito) casi no tienen
+   equivalente estandarizado, así que se mantienen como préstamo del
+   español dentro de la frase. El quechua tiene variantes regionales
+   (wanka en Junín, chanka en Ayacucho/Huancavelica, collao en Cusco/Puno,
+   entre otras): antes de usar este texto con una comunidad real, pide
+   que alguien que hable la variante de esa zona lo revise. */
 
 const I18N = {
   es: {
@@ -12,8 +16,9 @@ const I18N = {
     "nav.juego": "Aprende jugando",
     "nav.autoeval": "Mide tu avance",
     "nav.talleres": "Talleres cerca de ti",
+    "nav.estrategias": "Estrategias",
 
-    "idx.eyebrow": "Junín · Aprende de una vez",
+    "idx.eyebrow": "Costa, sierra y selva · Aprende de una vez",
     "idx.hero.title": "Aprende a cuidar tu dinero, hoy",
     "idx.hero.lead": "Nada de teoría larga: cuatro reglas que puedes aplicar esta misma semana, un juego para practicar ahorro, y los talleres presenciales más cercanos a ti.",
     "idx.hero.cta1": "Jugar y aprender a ahorrar",
@@ -39,9 +44,15 @@ const I18N = {
     "idx.game-banner.cta": "Empezar el juego",
 
     "idx.talleres-banner.eyebrow": "Aprendizaje presencial",
-    "idx.talleres-banner.title": "Talleres cerca de la zona de Junín",
-    "idx.talleres-banner.lead": "Puntos Multired, oficinas de Caja Huancayo y talleres comunitarios donde puedes aprender cara a cara.",
+    "idx.talleres-banner.title": "Talleres presenciales en todo el Perú",
+    "idx.talleres-banner.lead": "Nacimos como piloto en Junín y ahora usamos la red nacional de Caja Huancayo, puntos Multired y talleres comunitarios para llegar a costa, sierra y selva.",
     "idx.talleres-banner.cta": "Ver todos los talleres",
+
+    "idx.estrategias-banner.eyebrow": "Más allá de esta web",
+    "idx.estrategias-banner.title": "Hay más formas de aprender, cerca de ti",
+    "idx.estrategias-banner.lead": "Talleres itinerantes, redes de vecinos, ferias de ahorro y estudiantes que enseñan gratis: descubre a quién acercarte esta semana.",
+    "idx.estrategias-banner.cta": "Ver más formas de aprender",
+    "idx.estrategias-banner.stat": "📍 Camiones-taller, talleres en mercados, ferias de ahorro y grupos de WhatsApp",
 
     "idx.footer.tag": "Yanapay Finanzas — \"yanapay\" significa ayudar, en quechua.",
     "idx.footer.meta": "Reto ABR · Economía 2",
@@ -271,10 +282,13 @@ const I18N = {
     "eval.q10.optC": "Preguntar cuánto suma esa comisión en total y compararla con otras opciones: igual es un costo",
     "eval.q10.explanation": "Una comisión fija repetida es un costo real, aunque no se llame \"interés\". Lo importante es cuánto pagarás en total, no el nombre que le pongan.",
 
-    "talleres.eyebrow": "Presencial y cerca de ti",
-    "talleres.title": "Talleres y puntos de aprendizaje en Junín",
-    "talleres.lead": "Estos son los puntos de referencia de la propuesta: alianzas ya existentes en la región que pueden convertirse en aula.",
+    "talleres.eyebrow": "Presencial y cerca de ti, en cualquier región",
+    "talleres.title": "Talleres y puntos de aprendizaje en el Perú",
+    "talleres.lead": "El piloto nació en Junín. Estos son esos puntos, más nuevas alianzas con agencias de Caja Huancayo en la costa, la sierra y la selva del país.",
     "talleres.cta": "Cómo llegar",
+
+    "talleres.group.junin": "Piloto: Junín",
+    "talleres.group.nacional": "Expansión nacional, con Caja Huancayo como aliado",
 
     "taller.pampamichi.tag": "Comunidad · Piloto",
     "taller.pampamichi.name": "Pampamichi",
@@ -290,7 +304,54 @@ const I18N = {
 
     "taller.jauja.tag": "Comunidad",
     "taller.jauja.name": "Jauja",
-    "taller.jauja.desc": "Zona donde Caja Huancayo también dictó talleres de educación financiera reconocidos por la SBS."
+    "taller.jauja.desc": "Zona donde Caja Huancayo también dictó talleres de educación financiera reconocidos por la SBS.",
+
+    "taller.lima.tag": "Costa · Agencia Caja Huancayo",
+    "taller.lima.name": "Lima (San Martín de Porres)",
+    "taller.lima.desc": "Caja Huancayo tiene agencias en Lima Metropolitana (San Martín de Porres, San Juan de Lurigancho, Callao), la puerta de entrada del piloto a la costa.",
+
+    "taller.ayacucho.tag": "Sierra · Agencia Caja Huancayo",
+    "taller.ayacucho.name": "Ayacucho (Huanta)",
+    "taller.ayacucho.desc": "Agencias de Caja Huancayo en Ayacucho y Huanta, para llevar los talleres a la sierra sur del país.",
+
+    "taller.satipo.tag": "Selva · Agencia Caja Huancayo",
+    "taller.satipo.name": "Satipo",
+    "taller.satipo.desc": "En la Selva Central de Junín, Caja Huancayo también tiene agencia en Satipo: el modelo funciona igual de bien lejos de la sierra.",
+
+    /* ---- Más formas de aprender (estrategias.html) ---- */
+    "estr.eyebrow": "Además de esta web",
+    "estr.title": "Otras formas de seguir aprendiendo, cerca de ti",
+    "estr.lead": "Esta web es un punto de partida. La cultura financiera se aprende mejor cara a cara, en tu comunidad. Aquí tienes talleres, redes y personas a las que puedes acercarte hoy mismo.",
+
+    "estr.opts.title": "Aprovecha esto donde vives",
+    "estr.opts.lead": "No tienes que esperar a que alguien te enseñe: pregunta por esto, pídelo o ayuda a que llegue a tu comunidad.",
+
+    "estr.o1.title": "El camión-taller que llega a tu comunidad",
+    "estr.o1.desc": "Caja Huancayo recorre zonas como Pampamichi con su unidad móvil AYNI: ahí mismo te asesoran, evalúan un crédito o te abren una cuenta de ahorro. Pregunta en tu municipio o comunidad cuándo pasa por tu zona.",
+    "estr.o2.title": "Talleres para tu olla común, feria o mercado",
+    "estr.o2.desc": "Si organizas o participas en una olla común, un mercado o una feria, puedes pedir un taller como \"De la Caja a la Olla\": sesiones de ahorro y emprendimiento hechas para negocios pequeños, no para expertos.",
+    "estr.o3.title": "Participa en el reto de octubre",
+    "estr.o3.desc": "Cada Semana Mundial del Ahorro, las cajas y bancos hacen concursos y ferias en sus agencias. Anímate a participar, y si te toca organizar uno, pide que el premio sea algo real: una mejor tasa para quien complete el taller.",
+    "estr.o4.title": "Vuélvete promotor en tu comunidad",
+    "estr.o4.desc": "No hace falta ser experto: capacítate una vez, en un taller como \"Finanzas en el Cole\" pero para adultos, y ayuda a que más vecinos entiendan lo mismo que tú, en quechua o en español.",
+    "estr.o5.title": "Aprovecha la fila del agente",
+    "estr.o5.desc": "La próxima vez que cobres en un agente Multired un día de pago de Juntos, Pensión 65 o tu CTS, pregunta si hay un microtaller de diez minutos mientras esperas. Si no lo hay todavía, pídelo.",
+    "estr.o6.title": "Talleres gratuitos con estudiantes",
+    "estr.o6.desc": "Universidades como la UPAO ya llevan estudiantes de Economía y Contabilidad a dictar talleres a microempresarios. Si tienes un negocio pequeño, pregunta en la universidad más cercana si hay uno disponible.",
+    "estr.o7.title": "Sigue aprendiendo por WhatsApp",
+    "estr.o7.desc": "Después de un taller presencial, pide que te agreguen a una lista de difusión con audios cortos, en español o quechua. Funcionan aunque tengas poca señal, y te recuerdan lo aprendido semana a semana.",
+
+    "estr.res.title": "Recursos gratuitos para seguir ahora mismo",
+    "estr.res.lead": "Mientras se organiza un taller cerca de ti, esto ya está disponible hoy, sin costo.",
+    "estr.res1.title": "Finanzas para Ti (SBS)",
+    "estr.res1.desc": "Tips, webinars y cursos cortos para adultos sobre ahorro, crédito y seguros.",
+    "estr.res2.title": "Finanzas en el Cole (SBS)",
+    "estr.res2.desc": "Material gratuito para docentes de primaria y secundaria, alineado al currículo nacional.",
+    "estr.res3.title": "Nuestro juego de ahorro",
+    "estr.res3.desc": "Practica las mismas decisiones del día a día, sin arriesgar dinero real.",
+    "estr.res4.title": "Talleres cerca de ti",
+    "estr.res4.desc": "El mapa con los puntos donde ya puedes acercarte en el Perú.",
+    "estr.res.cta": "Visitar"
   },
 
   qu: {
@@ -298,8 +359,9 @@ const I18N = {
     "nav.juego": "Pukllaspa Yachay",
     "nav.autoeval": "Avanceykita Rikuy",
     "nav.talleres": "Yachachiykuna Kayllapi",
+    "nav.estrategias": "Aswan Yachanapaq",
 
-    "idx.eyebrow": "Junín · Kunanmantaraq yachay",
+    "idx.eyebrow": "Costa, sierra, selva · Kunanmantaraq yachay",
     "idx.hero.title": "Qullqiykita waqaychayta yachay, kunan",
     "idx.hero.lead": "Mana largo yachaywanchu: tawa kamachikuna kay semanapi ruwanaykipaq, huk pukllay waqaychayta yachanaykipaq, hinaspa yachachiykuna aswan kayllapi kaqkuna.",
     "idx.hero.cta1": "Pukllaspa waqaychayta yachay",
@@ -325,9 +387,15 @@ const I18N = {
     "idx.game-banner.cta": "Pukllayta qallariy",
 
     "idx.talleres-banner.eyebrow": "Ñawi ñawillanpi yachay",
-    "idx.talleres-banner.title": "Yachachiykuna Junín suyupi",
-    "idx.talleres-banner.lead": "Multired puntokuna, Caja Huancayo oficinankuna, hinaspa comunidad yachachiykuna, maypi ñawi ñawillapi yachaymanki.",
+    "idx.talleres-banner.title": "Ñawi ñawillanpi yachachiykuna, tukuy Perú-pi",
+    "idx.talleres-banner.lead": "Junín suyupi qallarirqanchik, kunanqa Caja Huancayo-pa tukuy suyukunapi oficinankunawan, Multired puntokunawan, hinaspa comunidad yachachiykunawan costa, sierra, selva-man chayanchik.",
     "idx.talleres-banner.cta": "Llapan yachachiykunata qhaway",
+
+    "idx.estrategias-banner.eyebrow": "Kay web-manta hawapi",
+    "idx.estrategias-banner.title": "Aswan formakuna kachkan, kayllapi yachanaykipaq",
+    "idx.estrategias-banner.lead": "Camión-taller puriqkuna, vecinokunapa redenkuna, waqaychay feriakuna, hinaspa qullqinwan mana yachachiq estudiantekuna: rikuriy pimanraq kay semana qhichpiykuwaq.",
+    "idx.estrategias-banner.cta": "Aswan formakunata qhaway",
+    "idx.estrategias-banner.stat": "📍 Camión-taller, mercadopi yachachiykuna, waqaychay feriakuna, WhatsApp huñukuna",
 
     "idx.footer.tag": "Yanapay Finanzas — \"yanapay\" nin yanapay, runasimipi.",
     "idx.footer.meta": "Reto ABR · Economía 2",
@@ -557,10 +625,13 @@ const I18N = {
     "eval.q10.optC": "Chay comisión hayk'a tukuypi kasqanta tapuy, hinaspa hukkunawan comparay: kikillantaqmi huk costo",
     "eval.q10.explanation": "Kutin kutin cobrasqa comisión fija-qa, chiqaq costom, \"interés\" mana nisqapas. Aswan importanteqa hayk'a tukuypi pagananayki, mana sutinqa.",
 
-    "talleres.eyebrow": "Ñawi ñawillanpi, kayllapi",
-    "talleres.title": "Yachachiykuna Junín suyupi",
-    "talleres.lead": "Kaykunam propuestapa puntonkuna: kay suyupi kaqña alianzakuna, aulaman tikrayta atiqkuna.",
+    "talleres.eyebrow": "Ñawi ñawillanpi, maykama suyupipas",
+    "talleres.title": "Yachachiykuna, tukuy Perú-pi",
+    "talleres.lead": "Pilotoqa Junín suyupi qallarirqan. Kaykunam chay puntokuna, hinaspa mosoq alianzakuna Caja Huancayo-wan costa, sierra, selva suyukunapi.",
     "talleres.cta": "Imaynata chayay",
+
+    "talleres.group.junin": "Piloto: Junín",
+    "talleres.group.nacional": "Tukuy suyuman mast'ariy, Caja Huancayo-wan aliado hina",
 
     "taller.pampamichi.tag": "Comunidad · Piloto",
     "taller.pampamichi.name": "Pampamichi",
@@ -576,7 +647,54 @@ const I18N = {
 
     "taller.jauja.tag": "Comunidad",
     "taller.jauja.name": "Jauja",
-    "taller.jauja.desc": "Suyu, maypi Caja Huancayo-pas SBS reqsisqa talleresta ruwarqan."
+    "taller.jauja.desc": "Suyu, maypi Caja Huancayo-pas SBS reqsisqa talleresta ruwarqan.",
+
+    "taller.lima.tag": "Costa · Caja Huancayo Oficina",
+    "taller.lima.name": "Lima (San Martín de Porres)",
+    "taller.lima.desc": "Caja Huancayo-qa Lima suyupipas oficinankunayuqmi (San Martín de Porres, San Juan de Lurigancho, Callao), costa-man pilotopa punkun.",
+
+    "taller.ayacucho.tag": "Sierra · Caja Huancayo Oficina",
+    "taller.ayacucho.name": "Ayacucho (Huanta)",
+    "taller.ayacucho.desc": "Caja Huancayo-pa oficinankuna Ayacucho hinaspa Huanta-pi, yachachiykunata sierra qhuchun suyuman apananpaq.",
+
+    "taller.satipo.tag": "Selva · Caja Huancayo Oficina",
+    "taller.satipo.name": "Satipo",
+    "taller.satipo.desc": "Junín-pa Selva Central-nimpi, Caja Huancayo-qa Satipo-pipas oficinayuqmi: kikillantaqmi allin kanman sierramanta karupipas.",
+
+    /* ---- Aswan Yachanapaq (estrategias.html) — borrador, ñawpaqta español-manta ---- */
+    "estr.eyebrow": "Kay web-manta hawapi",
+    "estr.title": "Aswan formakuna, kayllapi yachayta qatinaykipaq",
+    "estr.lead": "Kay web-qa qallariyllam. Qullqi yachayqa aswan allin yachakun ñawi ñawillanpi, comunidadniykipi. Kaypi kachkan yachachiykuna, runakuna, hinaspa pikunaman kunanmantaraq qhichpiykunki.",
+
+    "estr.opts.title": "Kayta servichiy, maypi tiyanki chaypi",
+    "estr.opts.lead": "Manam suyanaykichu pipas yachachisunanta: tapuriy, mañariy, utaq yanapay comunidadniykiman chayananpaq.",
+
+    "estr.o1.title": "Camión-taller, comunidadniykiman chayaq",
+    "estr.o1.desc": "Caja Huancayo-qa Pampamichi hina suyukunata puriq unidad AYNI-wan riqsin: chaypiñataq asesorasunki, crédito qhawarisunki, utaq cuenta waqaychayta kichasunki. Tapuriy municipiopi utaq comunidadniykipi hayk'aq suyuykiman chayamunanta.",
+    "estr.o2.title": "Yachachiykuna olla comúnniykipaq, feriaykipaq utaq mercadoykipaq",
+    "estr.o2.desc": "Olla comúnpi, mercadopi utaq feriapi kachkanki utaq organizanki chayqa, \"De la Caja a la Olla\" hina huk tallerta mañariy atinki: waqaychay hinaspa emprendimiento yachachiykuna, negocio pisillakunapaq, mana expertokunapaqchu.",
+    "estr.o3.title": "Octubrepa retonpi kuska ruway",
+    "estr.o3.desc": "Sapa Semana Mundial del Ahorro-pi, cajakuna hinaspa bancokuna concursokunata, feriakunata agencianninkupi ruwanku. Kuska ruwariy, hinaspa qampas huknin organizanki chayqa, chiqaq premiota mañariy: tasa aswan allinta, tallerta tukuchiqpaq.",
+    "estr.o4.title": "Comunidadniykipi promotor tukuy",
+    "estr.o4.desc": "Manam experto kanaykichu tiyan: huk kutilla capacitakuy, \"Finanzas en el Cole\" hina huk tallerpi ichaqa runa hatunkunapaq, hinaspa yanapay aswan vecinokuna qampa yachasqaykita yachananpaq, runasimipi utaq castellanopi.",
+    "estr.o5.title": "Agentepa colanta servichiy",
+    "estr.o5.desc": "Qhipa kutin Multired agentepi Juntos, Pensión 65 utaq CTS pagay p'unchaypi chaskikuptiyki, tapuriy huk chunka minutolla yachachiy kaqta suyachkaptiyki. Manaraq kaptin, mañariy.",
+    "estr.o6.title": "Yachachiykuna qullqinwan mana, estudiantekunawan",
+    "estr.o6.desc": "UPAO hina universidadkunaqa Economía utaq Contabilidad yachaqkunata apanñam microempresariokunaman yachachinankupaq. Negocio pisillayki kaptin, tapuriy aswan cercano universidadpi huk kaqchu.",
+    "estr.o7.title": "WhatsApp-pi yachasqaykita qatiy",
+    "estr.o7.desc": "Huk taller ñawi ñawillanpi tukusqan qhipa, mañariy huk lista de difusión-man yaykuyta, audio pisillakunawan, castellanopi utaq runasimipi. Pisilla señalwanpas purinku, hinaspa sapa semana yachasqaykita yuyarichisunki.",
+
+    "estr.res.title": "Kunanmanta kaq recursos, qullqinwan mana",
+    "estr.res.lead": "Kayllapi huk taller organizasqa kachkaptinña, kay material oficialkuna kunanmantaraq disponible kachkan.",
+    "estr.res1.title": "Finanzas para Ti (SBS)",
+    "estr.res1.desc": "Tips, webinar hinaspa curso pisillakuna, runa hatunkunapaq, waqaychay, mañay hinaspa segurokunamanta.",
+    "estr.res2.title": "Finanzas en el Cole (SBS)",
+    "estr.res2.desc": "Material qullqinwan mana, primaria hinaspa secundaria yachachiqkunapaq, currículo nacionalwan tinkusqa.",
+    "estr.res3.title": "Ñuqaykupa waqaychay pukllay",
+    "estr.res3.desc": "Sapa p'unchay decisionkunata ruwariy, mana chiqaq qullqita riesgopi churaspa.",
+    "estr.res4.title": "Yachachiykuna kayllapi",
+    "estr.res4.desc": "Mapa, maypichus piloto Perú-pi ruwakuchkan kaqkunawan.",
+    "estr.res.cta": "Qhaway"
   }
 };
 
@@ -657,3 +775,14 @@ document.addEventListener("DOMContentLoaded", () => {
   initNav();
   applyLang(getLang());
 });
+
+/* PWA: guarda el sitio para que abra igual sin señal después de la
+   primera visita, y permite "Agregar a pantalla de inicio". */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {
+      /* Si falla (por ejemplo, abierto desde un archivo local sin servidor),
+         el sitio sigue funcionando normal, solo sin modo offline. */
+    });
+  });
+}
